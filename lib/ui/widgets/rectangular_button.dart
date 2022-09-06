@@ -22,6 +22,7 @@ class RectangularButton extends StatelessWidget {
       onTap: isActive ? onPressed : null,
       child: Container(
         width: double.maxFinite,
+        height: 68,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: isColorPrimary || !isActive
             ? AppTheme.primaryColoredRectangularButtonDecoration()

@@ -32,6 +32,7 @@ class CustomTextField extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              height: 63,
               decoration: decoration ?? AppTheme.textFieldDecoration(),
               child: TextFormField(
                   controller: controller,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:solve/shared/routes/app_routes.dart';
 import 'package:solve/shared/themes/app_theme.dart';
 import 'package:solve/ui/widgets/custom_textfield.dart';
 import 'package:solve/ui/widgets/rectangular_button.dart';
@@ -92,12 +94,12 @@ class _SignInPageState extends State<SignInPage> {
                 thickness: 2,
               ),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               RectangularButton(
                   label: "Sign In", icons: Icons.login, onPressed: () {}),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               const Align(
                 alignment: Alignment.center,
@@ -107,13 +109,14 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 80,
+                    height: 80,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     decoration: AppTheme.textFieldDecoration(),
                     child: Image.asset('assets/images/google.png'),
@@ -123,6 +126,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   Container(
                     width: 80,
+                    height: 80,
                     decoration: AppTheme.textFieldDecoration(),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     child: Image.asset('assets/images/facebook.png'),
@@ -132,11 +136,15 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   Container(
                     width: 80,
+                    height: 80,
                     decoration: AppTheme.textFieldDecoration(),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     child: Image.asset('assets/images/twitter.png'),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -146,7 +154,9 @@ class _SignInPageState extends State<SignInPage> {
                     style: AppTheme.thinTextStyle,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.signup);
+                    },
                     child: const Text(
                       "Register now",
                       style: AppTheme.buttonLabelStyle2,

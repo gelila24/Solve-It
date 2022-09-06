@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:solve/shared/routes/app_routes.dart';
 import 'package:solve/shared/themes/app_theme.dart';
 import 'package:solve/ui/widgets/custom_textfield.dart';
 import 'package:solve/ui/widgets/rectangular_button.dart';
@@ -79,19 +81,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   print("sett");
                 },
               ),
-              SizedBox(
-                height: 10,
-              ),
-              InkWell(
-                onTap: () {},
-                child: const Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot Password',
-                    style: AppTheme.thinTextStyle,
-                  ),
-                ),
-              ),
               const SizedBox(
                 height: 20,
               ),
@@ -155,13 +144,15 @@ class _SignUpPageState extends State<SignUpPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Not a member?",
+                    "Already a member?",
                     style: AppTheme.thinTextStyle,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(Routes.signin);
+                    },
                     child: const Text(
-                      "Register now",
+                      "Log In",
                       style: AppTheme.buttonLabelStyle2,
                     ),
                   ),

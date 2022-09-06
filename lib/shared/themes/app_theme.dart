@@ -50,7 +50,7 @@ class AppTheme {
   static const TextStyle thinTextStyle = TextStyle(
     fontSize: 14,
     color: textBlack,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
 
   static const TextStyle articleTextStyle = TextStyle(
@@ -74,8 +74,8 @@ class AppTheme {
     fontWeight: FontWeight.w500,
   );
   static const TextStyle titleStyle3 = TextStyle(
-    fontSize: 18,
-    color: textGrey,
+    fontSize: 20,
+    color: textBlack,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle titleStyle4 = TextStyle(

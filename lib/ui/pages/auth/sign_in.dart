@@ -78,7 +78,9 @@ class _SignInPageState extends State<SignInPage> {
                 height: 10,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.forgotPassword);
+                },
                 child: const Align(
                   alignment: Alignment.centerRight,
                   child: Text(

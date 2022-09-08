@@ -84,7 +84,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: const Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    'Forgot Password',
+                    'Forgot Password?',
                     style: AppTheme.thinTextStyle,
                   ),
                 ),
@@ -99,7 +99,11 @@ class _SignInPageState extends State<SignInPage> {
                 height: 30,
               ),
               RectangularButton(
-                  label: "Sign In", icons: Icons.login, onPressed: () {}),
+                  label: "Sign In",
+                  icons: Icons.login,
+                  onPressed: () {
+                    Get.toNamed(Routes.homeScreen);
+                  }),
               const SizedBox(
                 height: 30,
               ),

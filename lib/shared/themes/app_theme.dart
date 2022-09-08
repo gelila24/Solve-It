@@ -30,6 +30,7 @@ class AppTheme {
   static const Color textGrey = Color(0xFF6B6464);
   static const Color textGrey2 = Color(0xFF999696);
   static const Color boxGrey = Color(0x69C4C4C4);
+  static const Color shadowColorLight = const Color(0x19123E77);
 
   //text styles
   static const TextStyle normalTextStyle = TextStyle(
@@ -108,6 +109,15 @@ class AppTheme {
     color: primaryColor,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle bodyText2 = TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+  );
+
+  static TextStyle bodyText2Bold =
+      bodyText2.copyWith(fontWeight: FontWeight.w600);
 
   //box decorations
   static BoxDecoration textFieldDecoration() => BoxDecoration(
@@ -183,6 +193,17 @@ class AppTheme {
           color: subtlePink,
           width: 1,
         ),
+      );
+  static BoxDecoration cardBoxShadow() => BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: white,
+        boxShadow: [
+          BoxShadow(
+              color: shadowColorLight,
+              blurRadius: 20,
+              offset: Offset(0, 0),
+              spreadRadius: 0),
+        ],
       );
   static BoxDecoration orangeBoxDecoration() => const BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(30.0)), color: orange2);

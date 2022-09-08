@@ -4,6 +4,7 @@ import 'package:solve/shared/themes/app_theme.dart';
 class CustomTextField extends StatelessWidget {
   final IconData? rightIcon;
   final IconData? leftIcon;
+  final String? label;
   final Function()? onRightIconPressed;
   final FormFieldValidator<String>? validator;
   final String hintText;
@@ -14,6 +15,7 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {Key? key,
       this.validator,
+      this.label,
       required this.hintText,
       required this.controller,
       this.rightIcon,
@@ -31,6 +33,15 @@ class CustomTextField extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            label != null
+                ? Text(
+                    label!,
+                    style: AppTheme.normalTextStyle,
+                  )
+                : SizedBox(),
+            const SizedBox(
+              height: 10,
+            ),
             Container(
               height: 63,
               decoration: decoration ?? AppTheme.textFieldDecoration(),

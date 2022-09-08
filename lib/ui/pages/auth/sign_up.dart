@@ -90,8 +90,7 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(
                 height: 20,
               ),
-              RectangularButton(
-                  label: "Sign In", icons: Icons.login, onPressed: () {}),
+              RectangularButton(label: "Sign Up", onPressed: () {}),
               const SizedBox(
                 height: 20,
               ),

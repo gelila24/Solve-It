@@ -9,60 +9,93 @@ class CartCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.1),
-              blurRadius: 2,
-              spreadRadius: 2,
-              offset: Offset(0, 2),
-            ),
-          ],
-        ),
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Product Name"),
-                Text("Expire Date"),
-                Text("  Price")
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Container(
+            // alignment: Alignment.bottomRight,
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: AppTheme.red,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  blurRadius: 4,
+                  spreadRadius: 1,
+                ),
               ],
             ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Icon(
+              Icons.close,
+              size: 15,
+            )),
+        Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.1),
+                  blurRadius: 2,
+                  spreadRadius: 2,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Batch No"),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Quantity'),
-                    SizedBox(
-                      width: 2,
+                    Text(
+                      "Product Name",
+                      style: AppTheme.normalBold,
                     ),
-                    SizedBox(
-                      width: 25,
-                      height: 20,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                    Text("Expire Date"),
+                    Text(
+                      "  Price",
+                      style: AppTheme.normalBold,
+                    )
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Batch No"),
+                    Row(
+                      children: [
+                        Text(
+                          'Quantity',
+                          style: AppTheme.normalBold,
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 2,
-                    ),
-                    Text('Unit'),
+                        SizedBox(
+                          width: 2,
+                        ),
+                        SizedBox(
+                          width: 25,
+                          height: 20,
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                                // border: OutlineInputBorder(),
+                                ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 2,
+                        ),
+                        Text('Unit'),
+                      ],
+                    )
                   ],
                 )
               ],
-            )
-          ],
-        ));
+            )),
+      ],
+    );
   }
 }

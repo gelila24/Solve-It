@@ -28,142 +28,171 @@ class _HomePageState extends State<HomePage> {
       children: [
         SingleChildScrollView(
           child: Padding(
-              padding: const EdgeInsets.only(left: 40, right: 40, top: 50),
+              padding: const EdgeInsets.only(top: 50),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.1),
-                          blurRadius: 2,
-                          spreadRadius: 2,
-                          offset: Offset(0, 2),
+                  Text(
+                    'Catagory',
+                    style: AppTheme.titleStyle2,
+                  ),
+                  Image.asset("assets/images/catagoryBg.png"),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 40.0, top: 20, right: 40),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 0, 0, 0)
+                                    .withOpacity(0.1),
+                                blurRadius: 2,
+                                spreadRadius: 2,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: TextField(
+                              style: AppTheme.normalTextStyle,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText:
+                                    ('Search by Product Name, Batch No, ... '),
+                                hintStyle: AppTheme.greySubtitleStyle,
+                                // prefixIcon: const Icon(Icons.search),
+                                prefixIcon: const Icon(
+                                  Icons.search,
+                                  color: AppTheme.mainColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                       ],
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 15.0),
-                      child: TextField(
-                        style: AppTheme.normalTextStyle,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: ('Search'),
-                          hintStyle: AppTheme.greySubtitleStyle
-                              .copyWith(fontWeight: FontWeight.w400),
-                          // prefixIcon: const Icon(Icons.search),
-                          suffixIcon: const Icon(Icons.search),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Catagory',
-                    style: AppTheme.titleStyle3,
-                  ),
-                  SizedBox(
-                    height: 20,
                   ),
                   SingleChildScrollView(
                     child: ButtonGrid(buttons: [
                       ActionButton(
                         images: 'assets/images/syrup.png',
                         title: Text('Syrup'),
+                        description: Text('2540 Items'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/tablet.png',
                         title: Text('Syrup'),
+                        description: Text('2540 Items'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/equipment.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/cream.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/syrup.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/tablet.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/equipment.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/cream.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/syrup.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/tablet.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/equipment.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/cream.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/syrup.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/tablet.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/equipment.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},
                       ),
                       ActionButton(
                         images: 'assets/images/cream.png',
+                        description: Text('2540 Items'),
                         title: Text('Syrup'),
                         imageSize: 100,
                         onTap: () {},

@@ -31,24 +31,35 @@ class ListCard extends StatelessWidget {
               children: [
                 Text("Product Name"),
                 Text("Unit"),
-                Text(" Unit Price")
+                Text(
+                  " Unit Price",
+                  textAlign: TextAlign.start,
+                )
               ],
             ),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Batch No"),
                 Text("Expire Date"),
-                TextButton(
-                  style: ButtonStyle(
-                    side: MaterialStateProperty.all(const BorderSide(
-                      width: 1,
-                      color: Colors.black,
-                    )),
-                    foregroundColor: MaterialStateProperty.all(Colors.black),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: AppTheme.mainColor2,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 4,
+                        spreadRadius: 1,
+                      ),
+                    ],
                   ),
-                  onPressed: () {},
-                  child: Text('Add to Cart'),
+                  child: Text(
+                    "Add to Cart",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 )
               ],
             )

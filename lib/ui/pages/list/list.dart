@@ -52,11 +52,13 @@ class _ListPageState extends State<ListPage> {
                         style: AppTheme.normalTextStyle,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: ('Search'),
-                          hintStyle: AppTheme.greySubtitleStyle
-                              .copyWith(fontWeight: FontWeight.w400),
+                          hintText: ('Search by Product Name, Batch No, ... '),
+                          hintStyle: AppTheme.greySubtitleStyle,
                           // prefixIcon: const Icon(Icons.search),
-                          suffixIcon: const Icon(Icons.search),
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            color: AppTheme.mainColor,
+                          ),
                         ),
                       ),
                     ),
@@ -71,15 +73,15 @@ class _ListPageState extends State<ListPage> {
                         "Recent",
                         style: AppTheme.titleStyle3,
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Row(
-                          children: [
-                            Icon(Icons.filter_alt_outlined),
-                            Text("Filter", style: AppTheme.titleStyle3),
-                          ],
-                        ),
-                      ),
+                      // InkWell(
+                      //   onTap: () {},
+                      //   child: Row(
+                      //     children: [
+                      //       Icon(Icons.filter_alt_outlined),
+                      //       Text("Filter", style: AppTheme.titleStyle3),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                   SizedBox(

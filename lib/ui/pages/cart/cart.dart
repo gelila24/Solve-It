@@ -60,13 +60,13 @@ class _CardPageState extends State<CardPage> {
                     child: Column(
                       children: [
                         CartCard(),
-                        SizedBox(height: 40),
+                        SizedBox(height: 25),
                         CartCard(),
-                        SizedBox(height: 40),
+                        SizedBox(height: 25),
                         CartCard(),
-                        SizedBox(height: 40),
+                        SizedBox(height: 25),
                         CartCard(),
-                        SizedBox(height: 40),
+                        SizedBox(height: 25),
                       ],
                     ),
                   ),
@@ -75,19 +75,29 @@ class _CardPageState extends State<CardPage> {
                     alignment: Alignment.bottomRight,
                     child: Column(
                       children: [
-                        Text('0.00 Birr'),
-                        TextButton(
-                          style: ButtonStyle(
-                            side: MaterialStateProperty.all(const BorderSide(
-                              width: 1,
-                              color: Colors.black,
-                            )),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.black),
-                          ),
-                          onPressed: () {},
-                          child: Text('Buy'),
+                        Text(
+                          '0.00 Birr',
+                          style: AppTheme.normalBold,
                         ),
+                        Container(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 25, vertical: 8),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: AppTheme.mainColor2,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 4,
+                                spreadRadius: 1,
+                              ),
+                            ],
+                          ),
+                          child: Text(
+                            "Buy",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )
                       ],
                     ),
                   )

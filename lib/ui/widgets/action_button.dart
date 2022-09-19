@@ -12,6 +12,7 @@ class ActionButton extends StatelessWidget {
   /// displayed under the square container
   /// can have a maximum of two lines with overflow being replaced by dot-dot-dot
   final Widget title;
+  final Widget description;
 
   /// the size of the button
   /// if this property is not set it defaults to 90
@@ -30,6 +31,7 @@ class ActionButton extends StatelessWidget {
     Key? key,
     required this.images,
     required this.title,
+    required this.description,
     this.isEnabled = true,
     this.size = 130,
     this.imageSize = 50,
@@ -74,11 +76,24 @@ class ActionButton extends StatelessWidget {
                             width: imageSize,
                             height: imageSize,
                             child: Image.asset(images)),
-                        SizedBox(height: 10),
                         DefaultTextStyle(
                           child: this.title,
                           style: isEnabled
-                              ? AppTheme.bodyText2Bold.copyWith(wordSpacing: 3)
+                              ? AppTheme.bodyText2.copyWith(
+                                  wordSpacing: 3,
+                                  color: AppTheme.mainColor,
+                                )
+                              : AppTheme.bodyText2
+                                  .copyWith(color: Colors.grey, wordSpacing: 3),
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        DefaultTextStyle(
+                          child: this.description,
+                          style: isEnabled
+                              ? AppTheme.bodyText2.copyWith(
+                                  wordSpacing: 3, color: AppTheme.mainColor)
                               : AppTheme.bodyText2
                                   .copyWith(color: Colors.grey, wordSpacing: 3),
                           textAlign: TextAlign.center,

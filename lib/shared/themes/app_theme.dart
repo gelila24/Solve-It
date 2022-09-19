@@ -4,10 +4,15 @@ class AppTheme {
   //colors
   static const Color primaryColor = Color.fromARGB(255, 0, 0, 0);
   static const Color secondaryColor = Color(0xFFD9D9D9);
+  static const Color mainColor = Color(0xff43A0E4);
+  static const Color mainColor2 = Color(0xffFB7B04);
+
   static const Color white = Color(0xFFFFFFFF);
+  static const Color grey = Color(0xFFB1B1B1);
   static const Color orange = Color(0xFFFF2020);
   static const Color orange2 = Color(0xFFF7924A);
   static const Color blue = Color(0xFF2029FF);
+  static const Color red = Color(0xFFF14343);
   static const Color green = Color(0xFF04DE5B);
   static const Color pink = Color(0xFFFF5353);
   static const Color purple = Color(0xFFFBEEFF);
@@ -94,10 +99,14 @@ class AppTheme {
     color: textBlack,
     fontWeight: FontWeight.w800,
   );
+  static const TextStyle normalBold = TextStyle(
+    fontSize: 16,
+    color: textBlack,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle greySubtitleStyle = TextStyle(
     fontSize: 14,
-    color: textGrey,
-    fontWeight: FontWeight.w600,
+    color: grey,
   );
   static const TextStyle buttonLabelStyle = TextStyle(
     fontSize: 18,
@@ -126,10 +135,14 @@ class AppTheme {
       );
   static BoxDecoration textFieldDecoration2() => BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: peachBackground,
-        border: Border.all(
-          width: 1,
-        ),
+        color: white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 4,
+            spreadRadius: 3,
+          ),
+        ],
       );
   static BoxDecoration textFieldDecorations() => BoxDecoration(
         borderRadius: BorderRadius.circular(15),
